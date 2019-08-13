@@ -1,0 +1,16 @@
+﻿@model Quote
+
+<div>
+    <h1>Welcome to Quoting Dojo, you dweebs!!!</h1>
+    <form asp-action="AddQuote" asp-controller="Home" method="post">
+        <span asp-validation-for="name"></span><br>
+        <label asp-for="name"></label>
+        <input asp-for="name"><br>
+
+        <span asp-validation-for="content"></span><br>
+        <label asp-for="content"></label>
+        <textarea asp-for="content" cols="15" rows="3"></textarea><br>
+        <button>Add my quote!</button>
+    </form>
+    <a href="/quotes"><button>Skip to quotes</button></a>
+</div>

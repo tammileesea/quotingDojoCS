@@ -1,0 +1,11 @@
+@model Quote
+
+<div>
+    <h1>Here are all the quotes, you dweebs!!!</h1>
+    <a href="/">Add a quote</a>
+    @foreach (var quote in ViewBag.Quotes){
+        <p>"@quote["content"]"</p>
+        <p>- @quote["name"] at @quote["created_at"]</p>
+        <hr>
+    }
+</div>
